@@ -18,7 +18,11 @@ def read(square,board):
   the str value corresponding to the content of the square being checked
   None if the square is empty
   """
-  return None
+  re = board[square-1]
+  if board[square-1] == 0:
+    return None
+  else:
+    return re
 
 def write(square,board,player):
   """
@@ -34,8 +38,10 @@ def write(square,board,player):
   empty.  If the square is not empty, it should not change the gameboard and
   should return the original, unchanged gameboard data
   """
-  
-  return None
+  if board[square-1] == 0:
+    board[square-1] = player
+
+  return board
 
 def mainRead():
   board = [ 0, 'X', 0, 'X', 'O', 'O', 0 , 0, 0]

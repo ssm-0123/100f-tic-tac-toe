@@ -21,7 +21,34 @@ def displayString(board):
   return value
   str the gameboard
   """
-  return None
+  result =""
+  for i in range(6,9):
+    if board[i] == 0:
+      result = result + "-"
+    else:
+      result = result + f"{board[i]}"
+    if i != 8:
+      result = result +" "
+  result = result +"\n"
+
+  for i in range(3,6):
+    if board[i] == 0:
+      result = result + "-"
+    else:
+      result = result + f"{board[i]}"
+    if i != 5:
+      result = result +" "
+  result = result +"\n"
+
+  for i in range(0,3):
+    if board[i] == 0:
+      result = result + "-"
+    else:
+      result = result + f"{board[i]}"
+    if i != 2:
+      result = result +" "
+
+  return result
 
 def main():
   board = [ 'O' , 0 , 0 , 'X' , 'O' , 0 , 0 , 0 , 'X' ] 
